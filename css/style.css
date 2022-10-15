@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 /* body {
     width: 600px;
     margin: 0 auto;
@@ -28,7 +27,6 @@
     position: absolute;
 }
 
-
 /* .circle-move {
     position: relative;
     top: 40%;
@@ -43,6 +41,7 @@
     background-color: black;
 
 } */
+
 .circle-move p:nth-child(1){
     position: absolute;
     top: 35%;
@@ -51,6 +50,7 @@
     color: white;
     transform: rotate(60deg);    
 }
+
 .circle-move p:nth-child(2){
     position: absolute;
     top: 20%;
@@ -82,4 +82,10 @@
 #top .menu1 p, #top .menu2 p, #top .menu3 p {
     color: red;
     font-size: 12px;
+}
+
+@media screen and (max-width: 746px){    
+    .sp-none {
+        display: none;
+    }    
 }
