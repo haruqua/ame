@@ -42,23 +42,6 @@
 
 } */
 
-.circle-move p:nth-child(1){
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    font-size: 40px;
-    color: white;
-    transform: rotate(60deg);    
-}
-
-.circle-move p:nth-child(2){
-    position: absolute;
-    top: 20%;
-    left: 37%;
-    font-size: 40px;
-    color: white;
-    transform: rotate(40deg);    
-}
 
 .circle-move p:hover {
     color: black;
@@ -84,7 +67,57 @@
     font-size: 12px;
 }
 
-@media screen and (max-width: 746px){    
+.circle-move {
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    animation-name: rain;
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 117px;    
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.droplet {
+    width: 18px;
+    height: 35px;
+    background:  -webkit-radial-gradient(center, farthest-corner,  #A4DDF5, #76CBF1);
+    border-radius: 10px 10px 10px 10px / 30px 30px 10px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
+    transform: rotate(-30deg);
+
+  }
+
+  .droplet1 {
+    margin-left: 10%;
+
+}
+
+  .droplet2 {
+    margin-right: 10%;
+
+  }
+ 
+  @keyframes rain {
+    0% {
+        transform: translate(0,0);
+    }
+
+    100% {
+        transform: translate(150px, 150px);
+        opacity: 0;
+    }
+
+  }
+
+
+@media screen and (max-width: 760px){    
     .sp-none {
         display: none;
     }    
