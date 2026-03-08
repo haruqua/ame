@@ -67,54 +67,31 @@
     font-size: 12px;
 }
 
-.circle-move {
-    position: absolute;
-    top: 10%;
-    left: 28%;
+.droplet {
+    position: fixed;
+    width: 18px;
+    height: 35px;
+    background: -webkit-radial-gradient(center, farthest-corner, #A4DDF5, #76CBF1);
+    border-radius: 10px 10px 10px 10px / 30px 30px 10px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
     animation-name: rain;
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-    gap: 117px;    
     animation-duration: 3s;
-    animation-delay: 0s;
     animation-fill-mode: backwards;
-    animation-direction: linear;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
-.droplet {
-    width: 18px;
-    height: 35px;
-    background:  -webkit-radial-gradient(center, farthest-corner,  #A4DDF5, #76CBF1);
-    border-radius: 10px 10px 10px 10px / 30px 30px 10px 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
-    transform: rotate(-30deg);
-
-  }
-
-  .droplet1 {
-    margin-left: 10%;
-
-}
-
-  .droplet2 {
-    margin-right: 10%;
-
-  }
- 
-  @keyframes rain {
+@keyframes rain {
     0% {
-        transform: translate(0,0);
+        transform: rotate(-30deg) translate(0, 0);
+        opacity: 1;
     }
 
     100% {
-        transform: translate(150px, 150px);
+        transform: rotate(-30deg) translate(150px, 150px);
         opacity: 0;
     }
-
-  }
+}
 
 
 @media screen and (max-width: 760px){    
