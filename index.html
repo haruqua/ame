@@ -35,10 +35,19 @@
           <p>fairwater</p>
         </li>
       </menu>
-      <div class="circle-move">
-        <p class="droplet droplet1"></p>
-        <p class="droplet droplet2"></p>
-      </div>
     </main>
+    <script>
+      (function () {
+        var DROPLET_COUNT = 20;
+        for (var i = 0; i < DROPLET_COUNT; i++) {
+          var droplet = document.createElement('div');
+          droplet.classList.add('droplet');
+          droplet.style.top = Math.random() * 100 + '%';
+          droplet.style.left = Math.random() * 100 + '%';
+          droplet.style.animationDelay = (Math.random() * 3).toFixed(2) + 's';
+          document.body.appendChild(droplet);
+        }
+      })();
+    </script>
   </body>
 </html>
